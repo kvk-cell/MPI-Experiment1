@@ -41,6 +41,8 @@ int main(int argc, char** argv)
 
     if (myid == 0)
     {
+        printf("The integal of x^3 in region [%d,%d] =%16.15f\n", a, b, inte);
+        fflush(stdout);
 		endwtime = MPI_Wtime();
 		printf("wall clock time = %f\n", endwtime - startwtime);
 		fflush(stdout);

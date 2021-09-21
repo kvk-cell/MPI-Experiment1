@@ -35,6 +35,12 @@ int main(int argc, char** argv)
         }
     }
     printf("I am process %d, I recv total %d from process 0, and inte=%f.\n", myid, C, inte);
+
+    if (myid == 0)
+    {
+        printf("The integal of x^3 in region [%d,%d] =%16.15f\n", a, b, inte);
+        fflush(stdout);
+    }
     
     MPI_Finalize(); 
 }
